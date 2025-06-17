@@ -1,0 +1,23 @@
+{
+  "map": {
+    "path": "maps/level1.tmx"
+  },
+  "waves": [
+    {
+      "enemies": [
+        {
+          "type": "sample",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "enemies": [
+        {
+          "type": "sample",
+          "count": 10
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "js-ast-toolkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parse-folder.js",
+  "bin": {
+    "js-ast-toolkit": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/generator": "^7.27.5",
+    "@babel/parser": "^7.27.5",
+    "@babel/traverse": "^7.27.4",
+    "chalk": "^5.4.1",
+    "inquirer": "^12.6.3",
+    "yargs": "^18.0.0"
+  }
+}

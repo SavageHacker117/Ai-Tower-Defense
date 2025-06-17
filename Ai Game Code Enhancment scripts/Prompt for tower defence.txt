@@ -1,0 +1,32 @@
+🧩 Frontend Enhancements
+🧩 Frontend Enhancements
+- [ ] Refactor UI into reusable components (tower grid, health bars, wave UI).
+- [ ] Implement centralized state management (Redux, Zustand, etc.).
+- [ ] Decompose frontend code into modular structure (UI, logic, config).
+- [ ] Apply lazy loading to sprites, sound files, maps.
+- [ ] Optimize rendering (reduce re-renders, use memoization/virtualization).
+
+🔧 Backend Enhancements
+- [ ] Refactor server endpoints to RESTful API design.
+- [ ] Remove or consolidate redundant/unnecessary endpoints.
+- [ ] Convert Promises to async/await with proper error handling.
+- [ ] Secure admin/game actions with auth and input validation.
+- [ ] Optimize database queries and add indexing for hot paths.
+
+🔁 Full-Stack Feature Additions
+- [ ] Add user authentication (JWT or OAuth).
+- [ ] Persist user sessions and game state in the cloud.
+- [ ] Implement real-time co-op or PvP mode using WebSockets.
+- [ ] Integrate in-game store with Stripe/PayPal for cosmetic purchases.
+- [ ] Build a level editor for user-generated maps with server-side storage.
+
+🧠 Internal Script Usage
+- [ ] Ensure `parse-folder.js` is used for directory processing and dynamic loading.
+- [ ] Review and refactor `parse-folder.js` to align with any new folder/module structure.
+- [ ] Add comments and tests for `parse-folder.js` to support maintainability.
+
+📊 Developer Workflow
+- [ ] Write detailed inline comments for new/refactored code.
+- [ ] Follow commit message conventions (e.g., feat:, fix:, refactor:).
+- [ ] Add unit and integration tests for all critical paths.
+- [ ] Maintain UX/UI consistency with existing design.

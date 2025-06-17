@@ -1,0 +1,26 @@
+name: Code Complexity Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  complexity:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Complexity Analysis
+        run: node cli.js ci-check src --max-lines 60 --max-cyclomatic 10 --max-nesting 3 --fail-on-high

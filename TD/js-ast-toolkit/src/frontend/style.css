@@ -1,0 +1,146 @@
+/* Basic Setup */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+#gameCanvas { display: block; }
+
+#loadingScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #00ff88;
+    font-size: 2em;
+    gap: 20px;
+}
+
+/* HUD Styling */
+#hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.hud-panel {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hud-top, .hud-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.hud-bottom {
+    align-items: flex-end;
+}
+
+#health-info, #resources-bar, #wave-info, #score-info, #controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#healthHearts { display: flex; gap: 4px; }
+.health-heart {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    clip-path: polygon(50% 100%, 0 45%, 15% 0, 85% 0, 100% 45%);
+}
+
+#minimapCanvas { border: 1px solid #00ff88; }
+
+.game-button {
+    pointer-events: all;
+    padding: 10px 15px;
+    background-color: #0d4d2d;
+    color: #00ff88;
+    border: 1px solid #00ff88;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.game-button:hover {
+    background-color: #1a6e43;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.game-button:disabled {
+    background-color: #333;
+    color: #666;
+    border-color: #666;
+    cursor: not-allowed;
+}
+
+#enemyUI {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+/* Added Animation Keyframes */
+@keyframes scoreGlow {
+    0% { text-shadow: none; transform: scale(1); }
+    50% { text-shadow: 0 0 20px #ffdd44; transform: scale(1.1); }
+    100% { text-shadow: none; transform: scale(1); }
+}
+
+@keyframes healthFlash {
+    0%, 100% { filter: none; }
+    50% { filter: brightness(2) drop-shadow(0 0 10px #ff4444); }
+}
+
+@keyframes waveFlash {
+    0%, 100% { background: transparent; }
+    50% { background: rgba(255, 170, 0, 0.3); }
+}
+
+@keyframes resourceShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+    20%, 40%, 60%, 80% { transform: translateX(3px); }
+}

@@ -1,0 +1,273 @@
+[
+  {
+    "type": "export",
+    "name": "AudioManager",
+    "file": "src\\frontend\\AudioManager.js"
+  },
+  {
+    "type": "export",
+    "name": "AuthManager",
+    "file": "src\\frontend\\AuthManager.js"
+  },
+  {
+    "type": "export",
+    "name": "BossAISystem",
+    "file": "src\\frontend\\BossAISystem.js"
+  },
+  {
+    "type": "export",
+    "name": "Enemy",
+    "file": "src\\frontend\\enemy.js"
+  },
+  {
+    "type": "export",
+    "name": "EnemyFactory",
+    "file": "src\\frontend\\enemy.js"
+  },
+  {
+    "type": "export",
+    "name": "EnemyUIManager",
+    "file": "src\\frontend\\EnemyUIManager.js"
+  },
+  {
+    "type": "export",
+    "name": "initEnemyUIStyles",
+    "file": "src\\frontend\\EnemyUIManager.js"
+  },
+  {
+    "type": "function",
+    "name": "initEnemyUIStyles",
+    "file": "src\\frontend\\EnemyUIManager.js",
+    "line": 575
+  },
+  {
+    "type": "export",
+    "name": "GameLoop",
+    "file": "src\\frontend\\GameLoop.js"
+  },
+  {
+    "type": "export",
+    "name": "HealthSystem",
+    "file": "src\\frontend\\HealthSystem.js"
+  },
+  {
+    "type": "export",
+    "name": "HUDManager",
+    "file": "src\\frontend\\HUDManager.js"
+  },
+  {
+    "type": "export",
+    "name": "InputManager",
+    "file": "src\\frontend\\InputManager.js"
+  },
+  {
+    "type": "export",
+    "name": "LevelData",
+    "file": "src\\frontend\\LevelData.js"
+  },
+  {
+    "type": "import",
+    "source": "three",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./GameLoop.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./ResourceManager.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./PlayerHealthSystem.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./AudioManager.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./InputManager.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./NotificationManager.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./HUDManager.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./EnemyUIManager.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./MapData.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./LevelData.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./Pathfinding.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./enemy.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./WaveManager.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./TowerSystem.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./ProjectileSystem.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./TargetingSystem.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./StatusEffectSystem.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./VisualFeedbackSystem.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./MultiplayerManager.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "import",
+    "source": "./AuthManager.js",
+    "file": "src\\frontend\\main.js"
+  },
+  {
+    "type": "export",
+    "name": "MapData",
+    "file": "src\\frontend\\MapData.js"
+  },
+  {
+    "type": "export",
+    "name": "MapAnalyzer",
+    "file": "src\\frontend\\MapData.js"
+  },
+  {
+    "type": "export",
+    "name": "MultiplayerManager",
+    "file": "src\\frontend\\MultiplayerManager.js"
+  },
+  {
+    "type": "export",
+    "name": "NotificationManager",
+    "file": "src\\frontend\\NotificationManager.js"
+  },
+  {
+    "type": "export",
+    "name": "ParticleSystem",
+    "file": "src\\frontend\\ParticleSystem.js"
+  },
+  {
+    "type": "export",
+    "name": "Pathfinding",
+    "file": "src\\frontend\\Pathfinding.js"
+  },
+  {
+    "type": "export",
+    "name": "PlayerHealthSystem",
+    "file": "src\\frontend\\PlayerHealthSystem.js"
+  },
+  {
+    "type": "export",
+    "name": "ProjectileSystem",
+    "file": "src\\frontend\\ProjectileSystem.js"
+  },
+  {
+    "type": "export",
+    "name": "ResourceManager",
+    "file": "src\\frontend\\ResourceManager.js"
+  },
+  {
+    "type": "export",
+    "name": "StatusEffectSystem",
+    "file": "src\\frontend\\StatusEffectSystem.js"
+  },
+  {
+    "type": "export",
+    "name": "TargetingSystem",
+    "file": "src\\frontend\\TargetingSystem.js"
+  },
+  {
+    "type": "import",
+    "source": "three",
+    "file": "src\\frontend\\tower.js"
+  },
+  {
+    "type": "export",
+    "name": "[anonymous]",
+    "file": "src\\frontend\\tower.js"
+  },
+  {
+    "type": "export",
+    "name": "Tower",
+    "file": "src\\frontend\\tower.js"
+  },
+  {
+    "type": "export",
+    "name": "TowerFactory",
+    "file": "src\\frontend\\tower.js"
+  },
+  {
+    "type": "export",
+    "name": "TowerStoreUI",
+    "file": "src\\frontend\\TowerStoreUI.js"
+  },
+  {
+    "type": "export",
+    "name": "TowerSystem",
+    "file": "src\\frontend\\TowerSystem.js"
+  },
+  {
+    "type": "export",
+    "name": "VisualFeedbackSystem",
+    "file": "src\\frontend\\VisualFeedbackSystem.js"
+  },
+  {
+    "type": "import",
+    "source": "./enemy.js",
+    "file": "src\\frontend\\WaveManager.js"
+  },
+  {
+    "type": "export",
+    "name": "WaveManager",
+    "file": "src\\frontend\\WaveManager.js"
+  }
+]

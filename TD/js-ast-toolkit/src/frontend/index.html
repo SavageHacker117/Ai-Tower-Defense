@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Tower Defense Game</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div id="gameContainer">
+		<canvas id="gameCanvas" width="1280" height="720"></canvas>
+
+        	<div id="notifications"></div>
+
+        	<div id="hud">
+            		<div class="hud-top">
+                		<div id="resources-bar" class="hud-panel">
+                   			 <div class="resource-item">💰 Gold: <span id="gold">100</span></div>
+                  			 <div class="resource-item">⚡ Energy: <span id="energy">50</span></div>
+                		</div>
+                		<div id="wave-info" class="hud-panel">
+                    Wave: <span id="currentWave">0</span> / <span id="totalWaves">10</span>
+                		</div>
+                		<div id="score-info" class="hud-panel">
+                    Score: <span id="score">0</span>
+                		</div>
+                		<div id="health-info" class.hud-panel>
+                    			<span>Lives:</span>
+                    			<div id="healthHearts"></div>
+                </div>
+            </div>
+
+            <div class="hud-bottom">
+                <div id="minimapContainer" class="hud-panel">
+                    <canvas id="minimapCanvas" width="200" height="150"></canvas>
+                </div>
+                <div id="controls" class="hud-panel">
+                    <button id="startWaveBtn" class="game-button">▶ Start Wave</button>
+                    <button id="pauseBtn" class="game-button">❚❚ Pause</button>
+                    <button id="speedBtn" class="game-button">Speed x1</button>
+                </div>
+		</div>
+    </div>
+
+  <div id="enemyUI"></div>
+	</div>
+ <div id="loadingScreen">
+        <h1>Loading Game...</h1>
+        <button id="startGameBtn" class="game-button" style="display: none;">Start Game</button>
+    </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    	<script type="module" src="main.js"></script>
+</body>
+</html>

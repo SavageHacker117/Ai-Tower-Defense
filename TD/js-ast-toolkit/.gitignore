@@ -1,0 +1,6 @@
+node_modules
+deps.*
+*.report.json
+*.manifest.json
+missing-jsdoc.json
+tests/
