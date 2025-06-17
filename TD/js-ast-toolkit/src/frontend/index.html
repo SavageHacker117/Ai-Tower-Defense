@@ -1,56 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   	<meta charset="UTF-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<title>Tower Defense Game</title>
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tower Defense Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Loading Screen Overlay -->
+  <div id="loadingScreen" style="
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #111d2b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: sans-serif;
+    transition: opacity 0.3s ease-in-out;
+  ">
+    <h1>Loading...</h1>
+    <div id="loadingProgress" style="
+      margin: 10px;
+      font-size: 1.2em;
+    ">Starting game...</div>
+    <button id="startGameBtn" style="
+      display: none;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    ">Start Game</button>
+  </div>
 
-	<div id="gameContainer">
-		<canvas id="gameCanvas" width="1280" height="720"></canvas>
+  <!-- Main Game Container -->
+  <div id="game-container">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
 
-        	<div id="notifications"></div>
+    <div id="hud">
+      <div id="player-stats">
+        <p>Gold: <span id="gold-display">0</span></p>
+        <p>Lives: <span id="lives-display">10</span></p>
+      </div>
 
-        	<div id="hud">
-            		<div class="hud-top">
-                		<div id="resources-bar" class="hud-panel">
-                   			 <div class="resource-item">💰 Gold: <span id="gold">100</span></div>
-                  			 <div class="resource-item">⚡ Energy: <span id="energy">50</span></div>
-                		</div>
-                		<div id="wave-info" class="hud-panel">
-                    Wave: <span id="currentWave">0</span> / <span id="totalWaves">10</span>
-                		</div>
-                		<div id="score-info" class="hud-panel">
-                    Score: <span id="score">0</span>
-                		</div>
-                		<div id="health-info" class.hud-panel>
-                    			<span>Lives:</span>
-                    			<div id="healthHearts"></div>
-                </div>
-            </div>
+      <div id="wave-info">
+        <p>Wave: <span id="wave-indicator">1</span> / <span id="total-waves">10</span></p>
+        <p>Next Wave in: <span id="wave-countdown">30</span>s</p>
+        <button id="start-wave-button">Start Next Wave</button>
+      </div>
 
-            <div class="hud-bottom">
-                <div id="minimapContainer" class="hud-panel">
-                    <canvas id="minimapCanvas" width="200" height="150"></canvas>
-                </div>
-                <div id="controls" class="hud-panel">
-                    <button id="startWaveBtn" class="game-button">▶ Start Wave</button>
-                    <button id="pauseBtn" class="game-button">❚❚ Pause</button>
-                    <button id="speedBtn" class="game-button">Speed x1</button>
-                </div>
-		</div>
+      <div id="score-display">
+        <p>Score: <span>0</span></p>
+      </div>
+
+      <div id="tower-selection">
+        <button id="basic-tower-btn" data-tower-type="basic">Basic Tower ($50)</button>
+        <button id="archer-tower-btn" data-tower-type="archer">Archer Tower ($100)</button>
+      </div>
+
+      <div id="minimap-container"></div>
+      <div id="upgrade-panel" style="display:none;"></div>
     </div>
+  </div>
 
-  <div id="enemyUI"></div>
-	</div>
- <div id="loadingScreen">
-        <h1>Loading Game...</h1>
-        <button id="startGameBtn" class="game-button" style="display: none;">Start Game</button>
-    </div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
-    	<script type="module" src="main.js"></script>
+  <!-- Scripts -->
+  <script src="hudManager.js"></script>
+  <script src="game.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>

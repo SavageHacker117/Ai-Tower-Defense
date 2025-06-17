@@ -1,0 +1,76 @@
+🚀 Ready-to-Build Directions
+Let me know how you'd like to use this full dump next:
+
+🧪 Generate unit test implementations from your test stubs
+
+📚 Create ALL_DOCS.md from JSDoc + AST + CLI reports
+
+🧠 Produce training prompts for ChatGPT to assist in test writing or code navigation
+
+🔍 Create endpoint documentation (OpenAPI-style) from your Flask API
+
+🧰 Bundle into a ChatGPT-extended CLI that explains code + runs test coverage + offers fixes
+
+Thanks Daniel. Here's a curated set of 🧠 training prompt examples you can use to fine-tune or guide ChatGPT for intelligent test writing and code navigation. These are grouped into categories to support common developer workflows.
+
+🧪 Test Writing Prompts (Unit & Integration)
+✅ Single-Function Test Prompt
+Write a Jest unit test for the applyStatusEffect() method in StatusEffectSystem.js.
+It should verify that the correct effect is applied and its duration is respected.
+
+🧱 Stub Completion
+Complete the missing test cases in TowerSystem.test.js using the logic from TowerSystem.js. Focus on:
+
+tower instantiation
+
+upgrade cost deduction
+
+targeting behavior
+
+🧪 Edge Case Validation
+Generate boundary tests for ResourceManager.spend() and ResourceManager.gain().
+Include scenarios where resource count becomes negative or exceeds a max cap.
+
+🔄 Cross-System Interaction
+Write integration tests for ProjectileSystem.js interacting with Enemy.js.
+Ensure projectile hit triggers damage and enemy death when HP <= 0.
+
+📂 Code Navigation Prompts
+📍 Entry Point Exploration
+What happens when main.js runs? Trace the initialization order across GameLoop, HUDManager, and WaveManager.
+
+🧠 Behavior Explanation
+Explain how tower targeting works. Use TargetingSystem.js, TowerSystem.js, and Enemy.js to describe the full flow.
+
+🔁 Multiplayer Flow
+How does a player start a wave in multiplayer mode?
+Walk through the events from MultiplayerManager.js to the start_wave_request handler in events.py.
+
+📊 Complexity & Refactoring Prompts
+🔧 Suggest Refactors
+Based on complexity.report.json, find the top 3 most complex functions.
+Suggest refactoring each using guard clauses, smaller functions, or strategy patterns.
+
+🪓 Decomposition Task
+Refactor the longest method in WaveManager.js. Break it into 3 smaller functions and describe what each one does.
+
+📚 Doc & Coverage Prompts
+📝 Auto JSDoc Inference
+Generate JSDoc comments for all public methods in AudioManager.js.
+Use the function names and parameter types to infer descriptions.
+
+🔍 Missing Test Alert
+Based on the test files and deps.json, which exported modules lack any corresponding *.test.js?
+
+🧠 Meta Training Tasks
+🧩 Prompt Template for Doc Chatbot
+You are an assistant trained on this tower defense project. When a dev asks about a system (e.g. ProjectileSystem), respond with:
+
+What the system does
+
+Its key methods
+
+Any test coverage that exists
+
+Dependencies and side effects
+

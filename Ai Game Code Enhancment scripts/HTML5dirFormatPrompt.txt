@@ -1,0 +1,16 @@
+tower-defense-game/
+├── frontend/           # HTML5/JS/CSS game client
+│   ├── index.html     # Main game page
+│   ├── css/           # Stylesheets
+│   ├── js/            # JavaScript modules
+│   └── assets/        # Client-side assets
+├── backend/           # Node.js/Flask API server
+│   ├── app.py         # Main Flask application
+│   ├── models/        # Database models
+│   ├── routes/        # API endpoints
+│   └── websocket/     # Real-time multiplayer
+├── assets/            # Game assets
+│   ├── images/        # UI and background images
+│   ├── audio/         # Sound effects and music
+│   └── sprites/       # Tower and enemy sprites
+└── docs/              # Documentation

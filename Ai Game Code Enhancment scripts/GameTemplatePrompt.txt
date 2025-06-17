@@ -1,0 +1,16 @@
+📁 Project Structure
+tower-defense-game/
+├── frontend/
+│   ├── index.html (Full HD responsive layout)
+│   ├── css/styles.css (Cyber-fantasy theme)
+│   ├── js/
+│   │   ├── core/ (Game engine, renderer, input, audio)
+│   │   ├── entities/ (Towers, enemies, projectiles)
+│   │   ├── systems/ (Placement, UI, multiplayer)
+│   │   └── utils/ (Constants, math, assets)
+│   └── assets/
+│       ├── sprites/ (Generated tower & enemy sprites)
+│       └── images/ (Reference images)
+├── backend/ (Ready for Flask API)
+├── docs/ (Architecture & specifications)
+└── assets/ (Game assets)
