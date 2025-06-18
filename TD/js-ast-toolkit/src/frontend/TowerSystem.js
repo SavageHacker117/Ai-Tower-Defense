@@ -134,7 +134,7 @@ export class TowerSystem {
         sellValue: 0.7
       }
     };
-    Object.entries(towerConfigs).forEach(function ([type, config]) {
+    Object.entries(towerConfigs).forEach(([type, config]) => {
       this.towerTypes.set(type, config);
     });
   }
@@ -225,13 +225,15 @@ export class TowerSystem {
       playerId,
       cost: towerConfig.cost
     });
-    setTimeout(function () {
+    setTimeout(() => {
       if (this.towers.has(towerId)) {
         tower.isBuilding = false;
         this.triggerEvent('towerBuilt', {
           tower
         });
-        if (this.notificationManager) this.notificationManager.showMessage(`${towerConfig.name} construction completed!`, 'info');
+        if (this.notificationManager) {
+          this.notificationManager.showMessage(`${towerConfig.name} construction completed!`, 'info');
+        }
       }
     }, towerConfig.buildTime);
     return {
@@ -360,7 +362,7 @@ export class TowerSystem {
   update(deltaTime, enemies = []) {
     console.log("Calling method: update");
     const currentTime = Date.now();
-    this.towers.forEach(function (tower) {
+    this.towers.forEach((tower) => {
       if (tower.isBuilding) return;
       if (!tower.currentTarget || !this.isValidTarget(tower.currentTarget, tower)) {
         tower.currentTarget = this.findTarget(tower, enemies);
@@ -435,9 +437,7 @@ export class TowerSystem {
   }
   getTowersByPlayer(playerId) {
     console.log("Calling method: getTowersByPlayer");
-    return this.getAllTowers().filter(function (tower) {
-      return tower.playerId === playerId;
-    });
+    return this.getAllTowers().filter((tower) => tower.playerId === playerId);
   }
   getTowerTypes() {
     console.log("Calling method: getTowerTypes");
@@ -463,30 +463,23 @@ export class TowerSystem {
   triggerEvent(event, data) {
     console.log("Calling method: triggerEvent");
     const listeners = this.eventListeners.get(event);
-    if (listeners) listeners.forEach(function (callback) {
-      try {
-        callback(data);
-      } catch (e) {
-        console.error(e);
-      }
-    });
+    if (listeners)
+      listeners.forEach((callback) => {
+        try {
+          callback(data);
+        } catch (e) {
+          console.error(e);
+        }
+      });
   }
   getSystemStats() {
     console.log("Calling method: getSystemStats");
     const towers = this.getAllTowers();
     const totalTowers = towers.length;
-    const buildingTowers = towers.filter(function (t) {
-      return t.isBuilding;
-    }).length;
-    const totalDamage = towers.reduce(function (sum, t) {
-      return sum + t.totalDamageDealt;
-    }, 0);
-    const totalKills = towers.reduce(function (sum, t) {
-      return sum + t.kills;
-    }, 0);
-    const totalValue = towers.reduce(function (sum, t) {
-      return sum + t.totalCost;
-    }, 0);
+    const buildingTowers = towers.filter((t) => t.isBuilding).length;
+    const totalDamage = towers.reduce((sum, t) => sum + t.totalDamageDealt, 0);
+    const totalKills = towers.reduce((sum, t) => sum + t.kills, 0);
+    const totalValue = towers.reduce((sum, t) => sum + t.totalCost, 0);
     return {
       totalTowers,
       buildingTowers,
@@ -499,8 +492,10 @@ export class TowerSystem {
   }
   clearAllTowers() {
     console.log("Calling method: clearAllTowers");
-    this.towers.forEach(function (tower, towerId) {
-      if (this.healthSystem) this.healthSystem.unregisterEntity(towerId);
+    this.towers.forEach((tower, towerId) => {
+      if (this.healthSystem) {
+        this.healthSystem.unregisterEntity(towerId);
+      }
     });
     this.towers.clear();
     this.placementGrid.clear();
